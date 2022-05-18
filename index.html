@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es-ES">
+
+<head>
+<meta charset="utf-8">
+<title>Imágenes, Galerías de imágenes y imágenes modales</title>
+
+<!-- Información sobre el documento web -->
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="Confección y publicación de páginas web">
+<meta name="author" content="Jennifer">
+<meta name="generator" content="DreamWeaver">
+	
+<!-- Etiquetas de adaptación del contenido -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- FAVICON (icono de favoritos)-->
+<link rel="icon" href="img/favicon.ico" type="image/ico">
+
+<!-- Enlace externo a un documento de estilos CSS -->
+<link rel="stylesheet" href="css/estilos-fotos.css" type="text/css">
+	
+<!-- Enlace externo a un documento de funciones JavaScript -->
+<script src="js/funciones-fotos.js"></script>
+
+<!-- Enlace externo a un tipo de letra de Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- Enlace externo a Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+
+<body>
+<!--  DIV MAIN -->		
+<div id="main">
+    
+<!-- NEW MENÚ DE NAVEGACIÓN LATERAL -->
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#contact" onClick="closeNav()">Contact</a>
+  <a href="#slideshow" onClick="closeNav()">Slideshow</a>
+  <a href="#modalimg" onClick="closeNav()">Modal images</a>
+  <a href="#tabgallery" onClick="closeNav()">Tab gallery</a>
+</div>
+	
+<!-- Use any element to open the sidenav -->
+<span style="font-size:30px; cursor:pointer; position: sticky; top: 0; z-index: 1; color: darkcyan" onclick="openNav()">&#9776; open</span>
+	
+	
+<!-- -------------------------------------- -->
+<!-- NEW HERO IMAGE --> 
+<div class="hero-image" id="contact" style="position: relative">
+  <div class="hero-text">
+    <h1>I am Jenn Doe</h1>
+    <p>And I'm a Photographer</p>
+    <a href="https://www.multiversoexplorer.com/actividades/"><button>click here to view more</button></a>
+  </div>
+	
+	<div class="btnDown">
+	<a href="#slideshow">
+	<i class="fa fa-chevron-circle-down" style="font-size: 3em;color:white"></i>
+	</a>
+	</div>
+	
+</div>
+	
+	
+<!-- -------------------------------------- -->
+<!-- NEW SLIDESHOW GALLERY --> 
+ <h2 style="text-align: center" id="slideshow">Slideshow</h2>
+<!-- Container for the image gallery -->
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides" style="display: block">
+    <div class="numbertext">1 / 6</div>
+      <img src="img/img_lights_wide.jpg" alt="Northern Lights" style="width:100%">
+  </div>
+	
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="img/img_5terre_wide.jpg" alt="Cinque Terre" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="img/img_mountains_wide.jpg" alt="Mountains and fjords" style="width:100%">
+  </div>
+
+<div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="img/img_woods_wide.jpg" alt="The Woods" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="img/img_nature_wide.jpg" alt="Nature and sunrise" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="img/img_snow_wide.jpg" alt="Snowy Mountains" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption">The woods</p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row" style="position: relative">
+     <div class="column">
+      <img class="demo cursor active" src="img/img_lights.jpg" style="width:100%" onclick="currentSlide(1)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+	  <div class="column">
+      <img class="demo cursor" src="img/img_woods.jpg" style="width:100%" onclick="currentSlide(4)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+	
+	<div class="btnDown">
+	<a href="#modalimg">
+	<i class="fa fa-chevron-circle-down" style="font-size: 3em;color:white"></i>
+	</a>
+	</div>
+	
+</div>
+	
+	
+
+<!-- -------------------------------------- -->
+<!-- NEW IMG MODAL --> 
+
+<!-- Trigger the Modal -->
+<!-- SE OMITE/ BORRAMOS id="myImg" -->
+<h2 style="text-align: center;position: relative" id="modalimg">Modal images</h2>	
+<div style="display: flex; flex-direction: row">
+	<div> 
+		<img src="img/img_snow.jpg" alt="Snow" style="width:100%; max-width: 600px" onClick="abrirModal(this)" class="imagen">
+    </div>
+	<div>
+		<img src="img/img_nature.jpg" alt="Nature" style="width:100%; max-width: 600px" onClick="abrirModal(this)" class="imagen">
+	</div>
+	<div>
+		<img src="img/img_mountains.jpg" alt="Mountains" style="width:100%; max-width: 600px" onClick="abrirModal(this)" class="imagen">
+	</div>
+	<div>
+		<img src="img/img_lights.jpg" alt="Aurora" style="width:100%; max-width: 600px" onClick="abrirModal(this)" class="imagen">
+	</div>
+
+	
+</div>
+		
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <!-- <img class="modal-content" id="img01" alt="Snow">-->
+  <!-- SE CAMBIA POR UN DIV PARA QUE NO HA HAYA DOBLE CLICK AL ABRIRLAS -->
+	
+  <!-- Modal Content (The Image) -->
+  <div class="modal-content"></div>
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="captionModal"></div>
+	
+	
+</div>	
+	
+<!-- -------------------------------------- -->
+<!-- NEW TAP GALLERY --> 
+<h2 style="text-align: center" id="tabgallery">Tab gallery</h2>
+
+<div style="overflow: hidden; position: relative">
+
+<!-- The grid: four columns -->
+<div class="row2">
+  <div class="column2">
+	<img src="img/img_nature.jpg" alt="Nature" onclick="myFunction(this);" style="width:100%">
+  </div>
+  <div class="column2">
+	<img src="img/img_snow.jpg" alt="Snow" onclick="myFunction(this);" style="width:100%">
+  </div>
+  <div class="column2">
+	<img src="img/img_mountains.jpg" alt="Mountains" onclick="myFunction(this);" style="width:100%">
+  </div>
+  <div class="column2">
+	<img src="img/img_lights.jpg" alt="Lights" onclick="myFunction(this);" style="width:100%">
+  </div>
+</div>
+
+<!-- The expanding image container -->
+<div class="container2">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn2">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" alt="" src="img/img_nature.jpg" style="width:100%;">
+
+  <!-- Image text -->
+  <div id="imgtext">Nature</div>
+</div>	
+		
+	<div class="btnUp">
+	<a href="#contact">
+	<i class="fa fa-chevron-circle-up" style="font-size: 3em;color:white"></i>
+	</a>
+	</div>
+	
+</div>
+	
+<!--  BOTON VOLVER -->
+<!--  ---------------------------------------- -->	
+ <div class="buttonCenter">
+ <a href="https://www.multiversoexplorer.com/" class="button2"><span>Back</span></a>
+ </div>
+	
+	
+</div>
+<!--  FIN DIV MAIN -->	
+
+</body>
+</html>
